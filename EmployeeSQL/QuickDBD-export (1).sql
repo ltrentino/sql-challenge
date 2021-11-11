@@ -11,11 +11,10 @@ CREATE TABLE "departments" (
 );
 
 CREATE TABLE "dept_emp" (
-    "dept_emp_id" INT   NOT NULL,
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR(255)   NOT NULL,
     CONSTRAINT "pk_dept_emp" PRIMARY KEY (
-        "dept_emp_id"
+        "emp_no","dept_no"
      )
 );
 
@@ -49,11 +48,10 @@ CREATE TABLE "titles" (
 );
 
 CREATE TABLE "dept_manager" (
-    "dept_manager_id" INT   NOT NULL,
     "dept_no" VARCHAR(255)   NOT NULL,
     "emp_no" INT   NOT NULL,
     CONSTRAINT "pk_dept_manager" PRIMARY KEY (
-        "dept_manager_id"
+        "dept_no","emp_no"
      )
 );
 
